@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: "Fredoka", "Fredoka One", cursive, sans-serif;
+    --font-body: "Nunito", sans-serif;
+    --background: 280 50% 96%;
+    --foreground: 270 60% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 60% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 60% 18%;
+    --primary: 271 76% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 32 98% 58%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 35% 91%;
+    --muted-foreground: 270 15% 48%;
+    --accent: 155 65% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 30% 84%;
+    --input: 270 30% 84%;
+    --ring: 271 76% 53%;
+    --chart-1: 271 76% 53%;
+    --chart-2: 32 98% 58%;
+    --chart-3: 155 65% 45%;
+    --chart-4: 340 85% 62%;
+    --chart-5: 200 85% 55%;
+    --radius: 1.5rem;
+    --sidebar-background: 280 50% 96%;
+    --sidebar-foreground: 270 60% 18%;
+    --sidebar-primary: 271 76% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 35% 91%;
+    --sidebar-accent-foreground: 270 60% 18%;
+    --sidebar-border: 270 30% 84%;
+    --sidebar-ring: 271 76% 53%;
+  }
+
+  .dark {
+    --background: 270 30% 10%;
+    --foreground: 270 10% 96%;
+    --card: 270 28% 15%;
+    --card-foreground: 270 10% 96%;
+    --popover: 270 28% 15%;
+    --popover-foreground: 270 10% 96%;
+    --primary: 271 76% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 32 98% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 22% 20%;
+    --muted-foreground: 270 12% 62%;
+    --accent: 155 65% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 22% 24%;
+    --input: 270 22% 24%;
+    --ring: 271 76% 65%;
+    --chart-1: 271 76% 65%;
+    --chart-2: 32 98% 60%;
+    --chart-3: 155 65% 45%;
+    --chart-4: 340 80% 58%;
+    --chart-5: 200 80% 52%;
+    --sidebar-background: 270 30% 10%;
+    --sidebar-foreground: 270 10% 96%;
+    --sidebar-primary: 271 76% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 25% 18%;
+    --sidebar-accent-foreground: 270 10% 96%;
+    --sidebar-border: 270 22% 24%;
+    --sidebar-ring: 271 76% 65%;
+  }
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  background-image: radial-gradient(circle at 10% 20%, hsla(271, 76%, 53%, 0.07) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, hsla(32, 98%, 58%, 0.07) 0%, transparent 40%),
+                    radial-gradient(circle at 50% 50%, hsla(155, 65%, 45%, 0.04) 0%, transparent 60%);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+button, a, nav, [role=button] {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button, a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.card, [class*="rounded-2xl"], [class*="rounded-3xl"] {
+  box-shadow: 0 4px #00000014, 0 6px 20px #0000000f;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.dark body {
+  color: #f5f4f6;
+  background-color: hsl(var(--background));
+}
+
+.dark .text-muted-foreground {
+  color: #ada4b7 !important;
+}
+
+.dark [class*="bg-white\/"] p,
+.dark [class*="bg-white\/"] span,
+.dark [class*="bg-white\/"] div,
+.dark [class*="from-purple"] p,
+.dark [class*="from-purple"] span,
+.dark [class*="from-purple"] h1,
+.dark [class*="from-purple"] h2,
+.dark [class*="from-purple"] h3 {
+  color: #fff;
+}
+
+.dark .font-body {
+  color: inherit;
+}
+
+.dark [class*="bg-gradient"] *:not(button):not(a) {
+  color: #fff;
+}
+
+.dark [style*="rgba(255,255,255"] p,
+.dark [style*="rgba(255,255,255"] span,
+.dark [style*="rgba(255,255,255"] div {
+  color: #fff !important;
+}
+
+.dark input, .dark textarea {
+  background: #2e2239;
+  color: #f5f4f6;
+  border-color: #4c3c5d;
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+  color: #8c7e9a;
+}
+
+.dark .bg-card {
+  background: #261c31;
+  color: #f5f4f6;
+}
+
+.dark [class*="opacity-80"],
+.dark [class*="opacity-90"],
+.dark [class*="opacity-75"] {
+  opacity: .9;
+}

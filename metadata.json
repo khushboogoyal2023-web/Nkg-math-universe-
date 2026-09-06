@@ -1,0 +1,7 @@
+{
+  "name": "NKG Math Universe",
+  "description": "An enchanting, cartoon-filled adventure through the world of mathematics for Classes 1 to 9, featuring games, quizzes, tables, Vedic math, interactive models, and AI solver.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
